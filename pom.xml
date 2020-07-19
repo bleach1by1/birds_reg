@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+        http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+ 
+    <parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>28.0.0</version>
+		<relativePath />
+	</parent>
+ 
+  	<groupId>com.birds</groupId>
+  	<artifactId>birds_v1</artifactId>
+  	<packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+ 
+    <name>birds</name>
+    <description>The registration part of birds, which is the registration plug-in of the FiJi platform, can be linked with imaris</description>
+    <url>https://github.com/bleach1by1/birds_reg</url>
+    <inceptionYear>2020</inceptionYear>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://choosealicense.com/licenses/mit/#</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+ 
+    <developers>
+        <developer>
+            <id>[MY-GITHUB-ID]</id>
+            <name>[MY-FULL-NAME]</name>
+            <url>https://imagej.net/User:[MY-IMAGEJ-WIKI-ACCOUNT]</url>
+            <roles>
+                <!-- see https://imagej.net/Team -->
+                <role>founder</role>
+                <role>lead</role>
+                <role>developer</role>
+                <role>debugger</role>
+                <role>reviewer</role>
+                <role>support</role>
+                <role>maintainer</role>
+            </roles>
+        </developer>
+    </developers>
+    <contributors>
+        <contributor>
+            <name>None</name>
+        </contributor>
+    </contributors>
+ 
+    <mailingLists>
+        <mailingList>
+            <name>Image.sc Forum</name>
+            <archive>https://forum.image.sc/</archive>
+        </mailingList>
+    </mailingLists>
+ 
+    <scm>
+        <connection>scm:git:git://github.com/[MY-ORG]/[MY-REPO]</connection>
+        <developerConnection>scm:git:git@github.com:[MY-ORG]/[MY-REPO]</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/[MY-ORG]/[MY-REPO]</url>
+    </scm>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>http://github.com/[MY-ORG]/[MY-REPO]/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>None</system>
+    </ciManagement>
+ 
+    <properties>
+        <main-class>[MY-MAIN-CLASS-INCLUDING-PACKAGE]</main-class>
+        <package-name>[MY-PACKAGE-PREFIX]</package-name>
+        <license.licenseName>cc0</license.licenseName>
+        <license.copyrightOwners>N/A</license.copyrightOwners>
+    </properties>
+ 
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>3.14</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>ant</groupId>
+		    <artifactId>ant</artifactId>
+		    <version>1.6.5</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.github.junrar</groupId>
+		    <artifactId>junrar</artifactId>
+		    <version>0.7</version>
+		</dependency>
+	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>imagej.releases</id>
+			<url>http://maven.imagej.net/content/repositories/releases</url>
+		</repository>
+		<repository>
+			<id>imagej.snapshots</id>
+			<url>http://maven.imagej.net/content/repositories/snapshots</url>
+		</repository>
+		<repository>
+			<id>imagej.public</id>
+			<url>http://maven.imagej.net/content/groups/public</url>
+		</repository>
+		
+	</repositories>
+</project>
