@@ -230,8 +230,10 @@ public class DownSample {
 									ImageProcessor tempProcessor = ourBrainStack.getProcessor(ourBrainInti+(int)Math.floor(ratio*((double)locc+0.5))).resize(resizeX, resizeY).convertToByteProcessor();
 									if(indexx+locc+begin<=resizeZZ)
 										outImageTempStack.setProcessor(tempProcessor, indexx+locc+begin);
+									/*
 									else
 										IJ.error("Downsampling out of bounds");
+									*/
 									count2.countDown();
 								});
 								t.start();
