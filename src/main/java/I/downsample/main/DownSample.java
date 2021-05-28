@@ -181,7 +181,7 @@ public class DownSample {
 						atlasInt = new int[] {1,GlobalValue.ALLENLENZ};
 					}
 					
-					int cutZ = (int)((double)(2*ourBrainImage.getStackSize()-ourBrainInt[0]-ourBrainInt[ourBrainInt.length-1]+1)*resolutionZDouble/GlobalValue.REGVOXEL);
+					int cutZ = (int)((double)(ourBrainInt[ourBrainInt.length-1]-ourBrainInt[0]+1)*resolutionZDouble/GlobalValue.REGVOXEL);
 					int[] paragraphs = new int[ourBrainInt.length-1];
 					int temp = 0;
 					for(int i=0;i<paragraphs.length;i++) {
@@ -230,8 +230,10 @@ public class DownSample {
 									ImageProcessor tempProcessor = ourBrainStack.getProcessor(ourBrainInti+(int)Math.floor(ratio*((double)locc+0.5))).resize(resizeX, resizeY).convertToByteProcessor();
 									if(indexx+locc+begin<=resizeZZ)
 										outImageTempStack.setProcessor(tempProcessor, indexx+locc+begin);
+									/*
 									else
 										IJ.error("Downsampling out of bounds");
+									*/
 									count2.countDown();
 								});
 								t.start();
